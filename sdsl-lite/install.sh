@@ -65,7 +65,7 @@ if [ $? != 0 ]; then
 	exit 1
 fi
 
-cmake -DCMAKE_INSTALL_PREFIX="${SDSL_INSTALL_PREFIX}" .. # run cmake 
+cmake -DCMAKE_INSTALL_PREFIX="${SDSL_INSTALL_PREFIX}" -DCMAKE_POLICY_VERSION_MINIMUM=3.5 .. # run cmake 
 if [ $? != 0 ]; then
 	echo "ERROR: CMake build failed."
 	exit 1
